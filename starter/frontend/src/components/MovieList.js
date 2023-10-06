@@ -15,7 +15,7 @@ function MovieList({ onMovieClick }) {
     <ul>
       {movies.map((movie, index) => (
         <li className="movieItem" key={movie.id} onClick={() => onMovieClick(movie)}>
-          No{index + 1} - {movie.title}
+          No{index + 1}:. {movie.title}
         </li>
       ))}
     </ul>
