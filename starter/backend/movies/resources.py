@@ -7,6 +7,7 @@ movies = {
     "456": {"title": "Sonic the Hedgehog", "description": "Blue Sega character"},
     "789": {"title": "A Quiet Place", "description": "Scary monsters"},
     "101": {"title": "Beautiful Love", "description": "Love Story"},
+    "102": {"title": "Teen Love", "description": "Love Story"},
 }
 
 
