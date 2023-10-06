@@ -106,10 +106,9 @@ jobs:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           REPOSITORY: frontend
           IMAGE_TAG: latest
-          REACT_APP_MOVIE_API_URL: ${{ vars.REACT_APP_MOVIE_API_URL }}
         run: |
           aws eks update-kubeconfig --name cluster
-          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG --build-arg=REACT_APP_MOVIE_API_URL="http://$REACT_APP_MOVIE_API_URL/" .
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG --build-arg=REACT_APP_MOVIE_API_URL=http://a753fe30e44074c539e21026be0fdc7a-395757174.us-east-1.elb.amazonaws.com .
           docker images
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
